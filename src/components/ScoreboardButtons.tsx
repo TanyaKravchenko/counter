@@ -1,20 +1,16 @@
 import React from "react";
 
 type ScoreboardButtonsType = {
-    counter: () => void,
-    title: string,
-    count: number,
+    counter: () => void
+    title: string
     maxValue: number
 }
 
 export function ScoreboardButtons(props: ScoreboardButtonsType) {
-debugger;
-
     return (
-        <div>
+        <div className="Buttons">
             <button
-                onClick={() => props.counter()}
-                className={props.count === props.maxValue ? "disabled" : ""}>
+                onClick={() => props.counter()}>
                 {props.title}
             </button>
         </div>

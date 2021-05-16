@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import './App.css';
-import {Scoreboard} from "./components/Scoreboard";
-import {ScoreboardButtons} from "./components/ScoreboardButtons";
+import {Scoreboard} from './components/Scoreboard';
+import {ScoreboardButtons} from './components/ScoreboardButtons';
 
 function App() {
     let [count, setCount] = useState(0);
@@ -24,9 +24,19 @@ function App() {
                 <div className="Scoreboard">
                     <Scoreboard count={count} maxValue={maxValue}/>
                 </div>
-                <div className={"CounterButtons"}>
-                    <ScoreboardButtons counter={addCount} title={'inc'} count={count} maxValue = {maxValue}/>
-                    <ScoreboardButtons counter={resetCount} title={'reset'} count={count} maxValue = {maxValue}/>
+                <div className={'CounterButtons'}>
+                    <div className={count === maxValue ? 'disabled' : ''}>
+                        <ScoreboardButtons
+                            counter={addCount}
+                            title={'inc'}
+                            maxValue={maxValue}/>
+                    </div>
+                    <div>
+                        <ScoreboardButtons
+                            counter={resetCount}
+                            title={'reset'}
+                            maxValue={maxValue}/>
+                    </div>
                 </div>
             </div>
         </div>
