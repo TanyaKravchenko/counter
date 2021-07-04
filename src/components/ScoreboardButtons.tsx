@@ -3,7 +3,6 @@ import React from "react";
 type ScoreboardButtonsType = {
     counter: () => void
     title: string
-    maxValue: number
 }
 
 export function ScoreboardButtons(props: ScoreboardButtonsType) {

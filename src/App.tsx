@@ -29,13 +29,13 @@ function App() {
                         <ScoreboardButtons
                             counter={addCount}
                             title={'inc'}
-                            maxValue={maxValue}/>
+                        />
                     </div>
                     <div>
                         <ScoreboardButtons
                             counter={resetCount}
                             title={'reset'}
-                            maxValue={maxValue}/>
+                        />
                     </div>
                 </div>
             </div>
